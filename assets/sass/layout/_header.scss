@@ -2,10 +2,69 @@
     background-color: $color-primary;
     padding: 1.5rem 0;
 
+    @include respond(tab-land) {
+        position: fixed;
+        width: 100vw;
+    }
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .custom-logo-link {
+            z-index: 150;
+        }
+    }
+
+    .search-form {
+        @include respond(tab-land) {
+            display: none;
+        }
     }
 }
 
+
+
+//.header {
+//    background-color: $color-primary;
+//    padding: 1.5rem 0;
+//
+//    &-nav {
+//        margin-right: 4rem;
+//
+//        @include respond(tab-land) {
+//
+//        }
+//    }
+//
+//    &-wrapper {
+//        display: flex;
+//        justify-content: space-between;
+//        align-items: center;
+//
+//        img.open-menu {
+//            width: 4rem;
+//            display: none;
+//
+//            &:hover {
+//                cursor: pointer;
+//            }
+//
+//            @include respond(tab-land) {
+//                display: block;
+//            }
+//        }
+//
+//        img.top-menu__close {
+//            width: 4rem;
+//            display: none;
+//
+//            &:hover {
+//                cursor: pointer;
+//            }
+//        }
+//    }
+//}
+//
+//

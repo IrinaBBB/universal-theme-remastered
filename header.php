@@ -17,15 +17,22 @@
                 <?php the_custom_logo(); ?>
             <?php else : echo 'Universal'; ?>
             <?php endif; ?>
-            <?php wp_nav_menu([
-                'theme_location' => 'header_menu',
-                'menu' => '',
-                'container' => 'nav',
-                'container_class' => 'header-nav',
-                'menu_class' => 'menu',
-                'echo' => true,
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            ]) ?>
+            <img class="menu-open" src="<?php echo get_theme_file_uri() . '/assets/images/menu.svg' ?>"
+                 alt="burger menu">
+            <div class="menu-top">
+                <?php wp_nav_menu([
+                    'theme_location' => 'header_menu',
+                    'menu' => '',
+                    'container' => '',
+                    'container_class' => 'header-nav',
+                    'menu_class' => 'menu-inner',
+                    'echo' => true,
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                ]) ?>
+                <img class="menu-top__close" src="<?php echo get_theme_file_uri() . '/assets/images/close.svg' ?>"
+                     alt="close menu">
+            </div>
+            <!-- /.top-menu -->
             <?php get_search_form(); ?>
         </div>
         <!-- /.header-wrapper -->

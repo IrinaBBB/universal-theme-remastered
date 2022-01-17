@@ -1,15 +1,131 @@
 .menu {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    &-top {
+        display: inline-flex;
+        position: relative;
+
+        @include respond(tab-land) {
+            margin-top: 7.3rem;
+            padding-top: 5rem;
+            background-color: wheat;
+            width: 35vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2.2rem;
+            transition: all .8s ease-out;
+            display: none;
+        }
+
+        @include respond(tab-port) {
+            width: 50vw;
+        }
+
+
+        @include respond(phone) {
+            width: 100vw;
+        }
+
+
+        &__close {
+            cursor: pointer;
+            width: 2rem;
+            display: none;
+
+            @include respond(tab-land) {
+                display: block;
+                position: absolute;
+                right: 3rem;
+                top: 2rem;
+            }
+        }
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
     &-item {
+
+        @include respond(tab-land) {
+            margin-bottom: 3rem;
+        }
+
         a {
             text-decoration: none;
             color: $color-white;
             margin-left: 1.5rem;
             margin-right: 1.5rem;
+            text-transform: uppercase;
+            transition: all .5s;
+
+            &:hover {
+                color: $color-grey;
+            }
+        }
+    }
+
+    &-open {
+        display: none;
+        cursor: pointer;
+        transition: all 1s ease;
+
+        @include respond(tab-land) {
+            display: block;
         }
     }
 }
+
+
+//.top-menu {
+//    display: flex;
+//    align-items: center;
+//    margin-left: 4rem;
+//
+//    @include respond(tab-land) {
+//        display: block;
+//    }
+//
+//    &__close {
+//        @include respond(tab-land) {
+//            display: block;
+//        }
+//    }
+//}
+//
+//
+//.menu {
+//    display: flex;
+//    align-items: center;
+//    margin: 0;
+//    padding: 0;
+//    list-style: none;
+//
+//    @include respond(tab-land) {
+//
+//    }
+//
+//    &-item {
+//        @include respond(tab-land) {
+//        }
+//        a {
+//            text-decoration: none;
+//            color: $color-white;
+//            margin-left: 1.5rem;
+//            margin-right: 1.5rem;
+//            text-transform: uppercase;
+//        }
+//    }
+//}
+//
+//

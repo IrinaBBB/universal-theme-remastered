@@ -4,6 +4,9 @@
         width: 27rem;
         height: 4rem;
 
+        @include respond(tab-land) {
+            margin-bottom: 3rem;
+        }
         input,
         input:focus {
             position: absolute;

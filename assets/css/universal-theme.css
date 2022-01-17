@@ -1,21 +1,95 @@
-.menu {
+.menu-top {
+  display: inline-flex;
+  position: relative;
+}
+@media only screen and (max-width: 75em) {
+  .menu-top {
+    margin-top: 7.3rem;
+    padding-top: 5rem;
+    background-color: wheat;
+    width: 35vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.2rem;
+    transition: all 0.8s ease-out;
+    display: none;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .menu-top {
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .menu-top {
+    width: 100vw;
+  }
+}
+.menu-top__close {
+  cursor: pointer;
+  width: 2rem;
+  display: none;
+}
+@media only screen and (max-width: 75em) {
+  .menu-top__close {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+  }
+}
+.menu-inner {
   display: flex;
   align-items: center;
-  margin: 0;
-  padding: 0;
   list-style: none;
+}
+@media only screen and (max-width: 75em) {
+  .menu-inner {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .menu-item {
+    margin-bottom: 3rem;
+  }
 }
 .menu-item a {
   text-decoration: none;
   color: #fff;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.menu-item a:hover {
+  color: #bbb;
+}
+.menu-open {
+  display: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+@media only screen and (max-width: 75em) {
+  .menu-open {
+    display: block;
+  }
 }
 
 .search-form {
   position: relative;
   width: 27rem;
   height: 4rem;
+}
+@media only screen and (max-width: 75em) {
+  .search-form {
+    margin-bottom: 3rem;
+  }
 }
 .search-form input,
 .search-form input:focus {
@@ -60,6 +134,10 @@ html {
 }
 
 body {
+  height: 1000px;
+}
+
+body {
   font-size: 1.6rem;
 }
 
@@ -67,15 +145,44 @@ body {
   background-color: #262D33;
   padding: 1.5rem 0;
 }
+@media only screen and (max-width: 75em) {
+  .header {
+    position: fixed;
+    width: 100vw;
+  }
+}
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.header-wrapper .custom-logo-link {
+  z-index: 150;
+}
+@media only screen and (max-width: 75em) {
+  .header .search-form {
+    display: none;
+  }
+}
 
 .container {
   max-width: 114rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    max-width: 81rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    max-width: 70rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    max-width: 50rem;
+  }
 }
 
 /*# sourceMappingURL=universal-theme.css.map */
