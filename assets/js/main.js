@@ -14,6 +14,6 @@ function show() {
 }
 
 function close() {
-    topMenu.style.left = '-100%';
+    topMenu.style.left = '-110%';
     openMenu.style.display = 'block';
 }
