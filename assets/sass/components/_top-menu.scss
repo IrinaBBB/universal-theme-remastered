@@ -4,7 +4,7 @@
         position: relative;
 
         @include respond(tab-land) {
-            margin-top: 7.3rem;
+            margin-top: 7.2rem;
             padding-top: 5rem;
             background-color: wheat;
             width: 35vw;
@@ -78,6 +78,7 @@
         display: none;
         cursor: pointer;
         transition: all 1s ease;
+        width: 4rem;
 
         @include respond(tab-land) {
             display: block;

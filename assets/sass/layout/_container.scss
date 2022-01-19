@@ -3,7 +3,7 @@
     margin: 0 auto;
 
     @include respond(tab-land) {
-        max-width: 81rem;
+        max-width: 90rem;
     }
 
     @include respond(tab-port) {
@@ -11,6 +11,6 @@
     }
 
     @include respond(phone) {
-        max-width: 50rem;
+        max-width: 550rem;
     }
 }

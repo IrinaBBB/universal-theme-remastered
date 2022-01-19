@@ -4,7 +4,7 @@
 }
 @media only screen and (max-width: 75em) {
   .menu-top {
-    margin-top: 7.3rem;
+    margin-top: 7.2rem;
     padding-top: 5rem;
     background-color: wheat;
     width: 35vw;
@@ -67,12 +67,13 @@
   transition: all 0.5s;
 }
 .menu-item a:hover {
-  color: #bbb;
+  color: #BBB;
 }
 .menu-open {
   display: none;
   cursor: pointer;
   transition: all 1s ease;
+  width: 4rem;
 }
 @media only screen and (max-width: 75em) {
   .menu-open {
@@ -105,7 +106,7 @@
 }
 .search-form input::placeholder,
 .search-form input:focus::placeholder {
-  color: #bbb;
+  color: #BBB;
 }
 .search-form button {
   position: absolute;
@@ -136,6 +137,10 @@ body {
   height: 1000px;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-family: "Lato Regular", sans-serif;
   font-size: 1.4rem;
@@ -149,6 +154,7 @@ body {
   .header {
     position: fixed;
     width: 100vw;
+    z-index: 50;
   }
 }
 .header-wrapper {
@@ -171,7 +177,7 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .container {
-    max-width: 81rem;
+    max-width: 90rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -181,8 +187,117 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .container {
-    max-width: 50rem;
+    max-width: 550rem;
   }
+}
+
+.hero {
+  border: 1px solid red;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  min-height: 57rem;
+}
+@media only screen and (max-width: 75em) {
+  .hero {
+    padding-top: 7.3rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .hero {
+    flex-direction: column;
+  }
+}
+.hero .left {
+  flex-basis: 75%;
+  border: 1px solid aqua;
+  position: relative;
+  padding: 5.5rem 5.5rem 10rem 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 57rem;
+}
+.hero .left::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(64, 48, 61, 0.35);
+  z-index: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .hero .left {
+    flex-basis: 100%;
+  }
+}
+.hero .left .post-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero .left .author {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 2;
+}
+.hero .left .author-bio {
+  margin-left: 1rem;
+}
+.hero .left .author-name {
+  display: block;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero .left .author-rank {
+  color: rgba(255, 255, 255, 0.4);
+}
+.hero .left .author .avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+.hero .left .post-text {
+  z-index: 2;
+}
+.hero .left .post-text .category-name {
+  text-transform: uppercase;
+  color: #4592FF;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.hero .left .post-text .post-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 4rem;
+  line-height: 5rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+.hero .left .post-text .more {
+  margin-top: 5rem;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4592FF;
+  padding: 1rem 4rem 1rem 3rem;
+  border-radius: 2rem;
+}
+.hero .right {
+  flex-basis: 25%;
+}
+@media only screen and (max-width: 75em) {
+  .hero .right {
+    flex-basis: 100%;
+  }
+}
+.hero .avatar {
+  width: 4.5rem;
 }
 
 /*# sourceMappingURL=universal-theme.css.map */
