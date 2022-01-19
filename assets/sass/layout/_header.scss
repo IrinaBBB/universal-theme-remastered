@@ -5,6 +5,7 @@
     @include respond(tab-land) {
         position: fixed;
         width: 100vw;
+        z-index: 50;
     }
 
     &-wrapper {
